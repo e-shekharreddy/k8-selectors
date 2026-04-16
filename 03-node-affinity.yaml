@@ -7,6 +7,7 @@ metadata:
 spec:
   affinity:
     nodeAffinity:
+      # hard rule
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
@@ -14,6 +15,23 @@ spec:
             operator: In
             values:
             - us-east-1c
+            - us-east-1a
+      # Soft Rule
+      preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 10
+        preference:
+          matchExpressions:
+          - key: project
+            operator: In
+            values:
+            - roboshop
+      - weight: 7
+        preference:
+          matchExpressions:
+          - key: project
+            operator: In
+            values:
+            - flipkart
   containers:
   - name: nginx
     image: nginx
