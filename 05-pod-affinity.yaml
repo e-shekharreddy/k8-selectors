@@ -4,7 +4,6 @@ metadata:
   name: pod-1
   labels:
     tier: database
-
 spec:
   containers:
   - name: nginx
@@ -16,7 +15,6 @@ metadata:
   name: pod-2
   labels:
     tier: backend
-
 spec:
   affinity:
     podAffinity:
