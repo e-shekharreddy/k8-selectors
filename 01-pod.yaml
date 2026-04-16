@@ -8,5 +8,3 @@ spec:
     image: nginx
   nodeSelector:
     project: roboshop
-    ports:
-    - containerPort: 80
