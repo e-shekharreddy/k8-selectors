@@ -19,27 +19,11 @@ spec:
             operator: NotIn
             values:
             - roboshop
-      # # anti affinity
-      # preferredDuringSchedulingIgnoredDuringExecution:
-      # - weight: 10
-      #   preference:
-      #     matchExpressions:
-      #     - key: project
-      #       operator: NotIn
-      #       values:
-      #       - roboshop
-      # - weight: 20
-      #   preference:
-      #     matchExpressions:
-      #     - key: project
-      #       operator: In
-      #       values:
-      #       - flipkart
   containers:
   - name: nginx
     image: nginx
   tolerations:
   - key: "project"
     operator: "Equal"
-    value: "amazon"
+    value: "ajio"
     effect: "NoExecute"
