@@ -17,7 +17,8 @@ spec:
             - us-east-1c
           - key: project
             operator: In
-            values: amazon
+            values:
+            - amazon
       # # anti affinity
       # preferredDuringSchedulingIgnoredDuringExecution:
       # - weight: 10
