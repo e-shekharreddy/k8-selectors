@@ -41,5 +41,5 @@ spec:
   tolerations:
   - key: "project"
     operator: "Equal"
-    value: "roboshop"
+    value: "amazon"
     effect: "NoExecute"
